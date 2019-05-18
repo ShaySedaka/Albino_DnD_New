@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+ android:background="@android:color/black"
+    >
+
+    <LinearLayout
+        android:id="@+id/menu_bulk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true">
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/main_logo"
+
+            />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/holo_orange_light"
+            android:text="Choose Your Character..."
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:enabled="false"
+            android:textSize="20sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/character_selection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/menu_bulk">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:layout_marginBottom="40dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                
+                
+
+                <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp">
+                <Button
+                    android:id="@+id/buttonInigo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Inigo"
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp"
+                    android:drawableRight="@drawable/paladin"
+                    android:background="#504b4b" />
+            </RelativeLayout>
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp">
+                    <Button
+                        android:id="@+id/buttonCuahu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cuahu"
+                        android:textColor="@android:color/black"
+                        android:textSize="25sp"
+                        android:drawableRight="@drawable/ranger"
+                        android:background="#504b4b" />
+                </RelativeLayout>
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp">
+                    <Button
+                        android:id="@+id/buttonRig"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rig"
+                        android:textColor="@android:color/black"
+                        android:textSize="25sp"
+                        android:drawableRight="@drawable/fighter"
+                        android:background="#504b4b" />
+                </RelativeLayout>
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp">
+                    <Button
+                        android:id="@+id/buttonBreanne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Breanne"
+                        android:textColor="@android:color/black"
+                        android:textSize="25sp"
+                        android:drawableRight="@drawable/druid"
+                        android:background="#504b4b" />
+                </RelativeLayout>
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp">
+                    <Button
+                        android:id="@+id/buttonMerlin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Merlin"
+                        android:textColor="@android:color/black"
+                        android:textSize="25sp"
+                        android:drawableRight="@drawable/mage"
+                        android:background="#504b4b" />
+                </RelativeLayout>
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp">
+                    <Button
+                        android:id="@+id/buttonFemina"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Femina"
+                        android:textColor="@android:color/black"
+                        android:textSize="25sp"
+                        android:drawableRight="@drawable/barbarian"
+                        android:background="#504b4b" />
+                </RelativeLayout>
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp">
+                    <Button
+                        android:id="@+id/buttonLucian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lucian"
+                        android:textColor="@android:color/black"
+                        android:textSize="25sp"
+                        android:drawableRight="@drawable/thief"
+                        android:background="#504b4b" />
+                </RelativeLayout>
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp">
+                    <Button
+                        android:id="@+id/buttonHiretson"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hiretson"
+                        android:textColor="@android:color/black"
+                        android:textSize="25sp"
+                        android:drawableRight="@drawable/bard"
+                        android:background="#504b4b" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+
+</RelativeLayout>
