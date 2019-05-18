@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "585275393529",
+    "firebase_url": "https://albinodnd-4bff5.firebaseio.com",
+    "project_id": "albinodnd-4bff5",
+    "storage_bucket": "albinodnd-4bff5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585275393529:android:b70d025d595b991c",
+        "android_client_info": {
+          "package_name": "com.shay.albinodnd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585275393529-82vfq05l9nkn68ligllj0gbbemag4hqh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYvUFv5SAm3lOB_im4-2xAW3s3p_72ens"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585275393529-82vfq05l9nkn68ligllj0gbbemag4hqh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
