@@ -5,20 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CharacterActivity"
-    android:background="@android:color/black"
+    android:background="@drawable/background_dark"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
 
         <ImageView
             android:id="@+id/character_portrait"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/thief_large" />
+            android:src="@drawable/thief_large"
+            android:padding="1dp"
+            android:background="@android:color/holo_orange_light"
+            />
         
         <LinearLayout
             android:layout_width="wrap_content"
@@ -29,10 +33,12 @@
             <TextView
                 android:id="@+id/character_name"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Character Name"
                 android:textColor="@android:color/holo_orange_light"
-                android:textSize="18sp"/>
+                android:textSize="18sp"
+                android:layout_marginBottom="5dp"/>
             
             <LinearLayout
                 android:layout_width="match_parent"
@@ -133,16 +139,43 @@
     </LinearLayout>
 
     <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:gravity="center">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="18dp"
+                android:text="AC"
+                android:textAlignment="center" />
+            <TextView
+                android:id="@+id/character_armorclass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="16dp"
+                android:text="aclass"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_margin="20dp">
+        android:layout_margin="10dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -166,7 +199,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_margin="20dp">
+        android:layout_margin="10dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -190,7 +223,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_margin="20dp">
+        android:layout_margin="10dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -210,8 +243,209 @@
 
     </LinearLayout>
 
+
+
 </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="18dp"
+                android:text="TopAt1"
+                android:textAlignment="center" />
+            <TextView
+                android:id="@+id/character_topatt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="16dp"
+                android:text="att1"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="18dp"
+                android:text="TopAt2"
+                android:textAlignment="center" />
+            <TextView
+                android:id="@+id/character_topatt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="16dp"
+                android:text="att2"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="18dp"
+                android:text="TopAt3"
+                android:textAlignment="center" />
+            <TextView
+                android:id="@+id/character_topatt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="16dp"
+                android:text="att3"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="18dp"
+                android:text="Weapon"
+                android:textAlignment="center" />
+            <TextView
+                android:id="@+id/character_equipped_weapon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="16dp"
+                android:text="weapon"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_character_equipment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_rounded"
+                android:drawableRight="@drawable/equipment"
+                android:padding="5dp"
+                android:text="Equipment"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="25sp" />
+            <Button
+                android:id="@+id/button_character_inventory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_rounded"
+                android:drawableRight="@drawable/inventory"
+                android:padding="5dp"
+                android:text="Inventory"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="25sp" />
+            <Button
+                android:id="@+id/button_character_skills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_rounded"
+                android:drawableRight="@drawable/skills"
+                android:padding="5dp"
+                android:text="Skills"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/button_character_spells"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_rounded"
+                android:drawableRight="@drawable/spells"
+                android:padding="5dp"
+                android:text="Spells"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="25sp" />
+            <Button
+                android:id="@+id/button_character_languages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_rounded"
+                android:drawableRight="@drawable/languages"
+                android:padding="5dp"
+                android:text="Languages"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/button_character_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_rounded"
+                android:drawableRight="@drawable/notes"
+                android:padding="5dp"
+                android:text="notes"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+    </ScrollView>
 
 
 
