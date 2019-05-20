@@ -69,10 +69,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Inigo"
-                    android:textColor="@android:color/black"
+                    android:padding="5dp"
+                    android:textColor="@android:color/holo_orange_light"
+                    android:background="@drawable/btn_rounded"
                     android:textSize="25sp"
                     android:drawableRight="@drawable/paladin"
-                    android:background="#504b4b" />
+ />
             </RelativeLayout>
 
 
@@ -88,10 +90,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Cuahu"
-                        android:textColor="@android:color/black"
+                        android:padding="5dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:background="@drawable/btn_rounded"
                         android:textSize="25sp"
                         android:drawableRight="@drawable/ranger"
-                        android:background="#504b4b" />
+                         />
                 </RelativeLayout>
 
 
@@ -107,10 +111,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Rig"
-                        android:textColor="@android:color/black"
+                        android:padding="5dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:background="@drawable/btn_rounded"
                         android:textSize="25sp"
-                        android:drawableRight="@drawable/fighter"
-                        android:background="#504b4b" />
+                        android:drawableRight="@drawable/fighter" />
                 </RelativeLayout>
 
 
@@ -126,10 +131,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Breanne"
-                        android:textColor="@android:color/black"
+                        android:padding="5dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:background="@drawable/btn_rounded"
                         android:textSize="25sp"
-                        android:drawableRight="@drawable/druid"
-                        android:background="#504b4b" />
+                        android:drawableRight="@drawable/druid" />
                 </RelativeLayout>
 
 
@@ -145,10 +151,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Merlin"
-                        android:textColor="@android:color/black"
+                        android:padding="5dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:background="@drawable/btn_rounded"
                         android:textSize="25sp"
-                        android:drawableRight="@drawable/mage"
-                        android:background="#504b4b" />
+                        android:drawableRight="@drawable/mage" />
                 </RelativeLayout>
 
 
@@ -164,10 +171,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Femina"
-                        android:textColor="@android:color/black"
+                        android:padding="5dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:background="@drawable/btn_rounded"
                         android:textSize="25sp"
-                        android:drawableRight="@drawable/barbarian"
-                        android:background="#504b4b" />
+                        android:drawableRight="@drawable/barbarian" />
                 </RelativeLayout>
 
 
@@ -183,10 +191,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Lucian"
-                        android:textColor="@android:color/black"
+                        android:padding="5dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:background="@drawable/btn_rounded"
                         android:textSize="25sp"
-                        android:drawableRight="@drawable/thief"
-                        android:background="#504b4b" />
+                        android:drawableRight="@drawable/thief" />
                 </RelativeLayout>
 
 
@@ -202,10 +211,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Hiretson"
-                        android:textColor="@android:color/black"
+                        android:padding="5dp"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:background="@drawable/btn_rounded"
                         android:textSize="25sp"
-                        android:drawableRight="@drawable/bard"
-                        android:background="#504b4b" />
+                        android:drawableRight="@drawable/bard" />
                 </RelativeLayout>
 
 
