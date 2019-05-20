@@ -376,6 +376,18 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/button_character_attributes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_rounded"
+                android:drawableRight="@drawable/equipment"
+                android:padding="5dp"
+                android:text="Attributes"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="25sp" />
+
+            <Button
                 android:id="@+id/button_character_equipment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
