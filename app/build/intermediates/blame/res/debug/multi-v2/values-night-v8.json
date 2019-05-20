@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\AlbinoDnD\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "C:\\Users\\Shay\\AndroidStudioProjects\\Albino_DnD2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Shay\\.gradle\\caches\\transforms-2\\files-2.1\\6d8cfbc7593ac39f953c228d427d889a\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\Shay\\.gradle\\caches\\transforms-2\\files-2.1\\873a5275c026d779f5b2b394deca25a3\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

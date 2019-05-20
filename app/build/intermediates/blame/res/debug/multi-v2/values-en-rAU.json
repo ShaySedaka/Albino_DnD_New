@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\AlbinoDnD\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
+            "outputFile": "C:\\Users\\Shay\\AndroidStudioProjects\\Albino_DnD2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Shay\\.gradle\\caches\\transforms-2\\files-2.1\\6d8cfbc7593ac39f953c228d427d889a\\res\\values-en-rAU\\values-en-rAU.xml",
+                    "source": "C:\\Users\\Shay\\.gradle\\caches\\transforms-2\\files-2.1\\873a5275c026d779f5b2b394deca25a3\\res\\values-en-rAU\\values-en-rAU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Shay\\.gradle\\caches\\transforms-2\\files-2.1\\60c8ed7efecccb043c8f297a15c00591\\res\\values-en-rAU\\values-en-rAU.xml",
+                    "source": "C:\\Users\\Shay\\.gradle\\caches\\transforms-2\\files-2.1\\0702f862e8f31365555ecf43d6f1a308\\res\\values-en-rAU\\values-en-rAU.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
