@@ -1,19 +1,26 @@
+package com.shay.albinodnd;
+
 import java.util.ArrayList;
 
 public class Character {
 
     // character fields
-    private String name, owner, favWeapon;
+    private String name, owner, favWeapon, charClass;
     private int level, currentXP, armorClass, maxHP, currHP;
     private ArrayList<Attribute> attributes;
     private ArrayList<Item> inventory;
     private ArrayList<Skill> skills;
 
-    public Character(String name, String owner, String favWeapon, int level, int currentXP,
+    public Character(){
+
+    }
+
+    public Character(String name, String owner, String charClass, String favWeapon, int level, int currentXP,
                      int armorClass, int maxHP, int currHP, ArrayList<Attribute> attributes,
                      ArrayList<Item> inventory, ArrayList<Skill> skills) {
         this.name = name;
         this.owner = owner;
+        this.charClass = charClass;
         this.favWeapon = favWeapon;
         this.level = level;
         this.currentXP = currentXP;
@@ -32,6 +39,8 @@ public class Character {
     public String getOwner() {
         return owner;
     }
+
+    public String gerCharClass() { return charClass; }
 
     public String getFavWeapon() {
         return favWeapon;

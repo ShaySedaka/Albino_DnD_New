@@ -1,8 +1,14 @@
+package com.shay.albinodnd;
+
 public class Skill {
 
     //fields
     private String name, description;
     private int level;
+
+    public Skill() {
+
+    }
 
     public Skill(String name, String description, int level) {
         this.name = name;

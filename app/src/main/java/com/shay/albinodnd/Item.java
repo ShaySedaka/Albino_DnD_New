@@ -1,3 +1,5 @@
+package com.shay.albinodnd;
+
 import android.media.Image;
 
 public class Item {
@@ -11,6 +13,10 @@ public class Item {
     //fields
     private String name;
     private itemType type;
+
+    public Item() {
+
+    }
 
     public Item(String name, itemType type) {
         this.name = name;
