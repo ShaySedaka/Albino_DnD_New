@@ -15,21 +15,24 @@ import java.util.ArrayList;
 
 public class CharacterActivity extends AppCompatActivity {
 
-    private ArrayList<Character> characters = new ArrayList<Character>();
+    private ArrayList<Character> characters = new ArrayList<>();
+    private DatabaseReference databaseReference;
+    private ValueEventListener databaseReferenceListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character);
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference databaseReference = database.getReference();
-        databaseReference.child("characters").addValueEventListener(new ValueEventListener() {
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+        databaseReferenceListener = databaseReference.child("characters").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
                     characters.add(postSnapshot.getValue(Character.class));
                 }
+
+
             }
 
             @Override
@@ -39,5 +42,13 @@ public class CharacterActivity extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        databaseReference.removeEventListener(databaseReferenceListener);
+    }
+
+
 
 }
