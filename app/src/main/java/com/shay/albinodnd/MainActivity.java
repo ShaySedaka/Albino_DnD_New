@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -13,8 +14,11 @@ public class MainActivity extends AppCompatActivity {
     Button btnLucian, btnFemina, btnHiretson, btnRig, btnMerlin, btnBreanne, btnCuahu, btnInigo;
 
     //Fields
-    String mSelectedCharacter = "";
+    public static String mSelectedCharacter = "";
 
+    private String getSelecterCharacter(){
+        return mSelectedCharacter;
+    }
 
     private void getViews()
     {
@@ -33,9 +37,77 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
+                mSelectedCharacter = "Lucian";
                 MainActivity.this.startActivity(myIntent);
             }
         });
+
+        btnInigo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
+                mSelectedCharacter = "Inigo";
+                MainActivity.this.startActivity(myIntent);
+            }
+        });
+
+
+        btnCuahu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
+                mSelectedCharacter = "Cuahu";
+                MainActivity.this.startActivity(myIntent);
+            }
+        });
+
+
+        btnMerlin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
+                mSelectedCharacter = "Merlin";
+                MainActivity.this.startActivity(myIntent);
+            }
+        });
+
+
+        btnHiretson.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
+                mSelectedCharacter = "Hireston";
+                MainActivity.this.startActivity(myIntent);
+            }
+        });
+
+        btnFemina.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
+                mSelectedCharacter = "Femina";
+                MainActivity.this.startActivity(myIntent);
+            }
+        });
+
+        btnBreanne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
+                mSelectedCharacter = "Breanne";
+                MainActivity.this.startActivity(myIntent);
+            }
+        });
+
+        btnRig.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
+                mSelectedCharacter = "Rig";
+                MainActivity.this.startActivity(myIntent);
+            }
+        });
+
     }
 
     @Override
