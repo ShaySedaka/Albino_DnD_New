@@ -1,3 +1,5 @@
+package com.shay.albinodnd;
+
 public class DamageClass {
 
     public enum DieType {

@@ -1,3 +1,5 @@
+package com.shay.albinodnd;
+
 public class Weapon extends Item {
 
     enum WeaponType{
