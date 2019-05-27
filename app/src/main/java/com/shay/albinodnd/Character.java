@@ -77,4 +77,21 @@ public class Character {
     public int getCurrHP() {
         return currHP;
     }
+
+    public ArrayList<GeneralListItem> getListByName(String name) {
+        ArrayList<GeneralListItem> list = new ArrayList<>();
+        switch(name) {
+            case "attributes":
+                attributes.stream().forEach(list :: add);
+                return list;
+            case "inventory":
+                inventory.stream().forEach(list :: add);
+                return list;
+            case "skills":
+                skills.stream().forEach(list :: add);
+                return list;
+            default:
+                return null;
+        }
+    }
 }

@@ -1,9 +1,12 @@
 package com.shay.albinodnd;
 
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -15,9 +18,20 @@ import java.util.ArrayList;
 
 public class CharacterActivity extends AppCompatActivity {
 
-    private ArrayList<Character> characters = new ArrayList<>();
+    //Fields
+    public static String mSelectedOption = "";
+    public static ArrayList<Character> characters = new ArrayList<>();
     private DatabaseReference databaseReference;
     private ValueEventListener databaseReferenceListener;
+
+    private String getSelecterOption(){
+        return mSelectedOption;
+    }
+
+
+    //Views
+    Button btnInventory, btnSkill;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +45,6 @@ public class CharacterActivity extends AppCompatActivity {
                 for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
                     characters.add(postSnapshot.getValue(Character.class));
                 }
-
-
             }
 
             @Override
@@ -41,6 +53,8 @@ public class CharacterActivity extends AppCompatActivity {
             }
         });
 
+        getViews();
+        setListeners();
     }
 
     @Override
@@ -49,6 +63,30 @@ public class CharacterActivity extends AppCompatActivity {
         databaseReference.removeEventListener(databaseReferenceListener);
     }
 
+    private void getViews()
+    {
+        btnInventory = findViewById(R.id.button_character_inventory);
+        btnSkill = findViewById(R.id.button_character_skills);
+    }
 
+    private void setListeners() {
+        btnInventory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(CharacterActivity.this, ListActivity.class);
+                mSelectedOption = "inventory";
+                CharacterActivity.this.startActivity(myIntent);
+            }
+        });
+
+        btnSkill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(CharacterActivity.this, ListActivity.class);
+                mSelectedOption = "skills";
+                CharacterActivity.this.startActivity(myIntent);
+            }
+        });
+    }
 
 }

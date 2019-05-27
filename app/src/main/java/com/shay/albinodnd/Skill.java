@@ -1,11 +1,12 @@
 package com.shay.albinodnd;
 
-public class Skill {
+public class Skill extends GeneralListItem {
 
     //fields
     private String name, description;
     private int level;
 
+    //empty constructor for firebase
     public Skill() {
 
     }
@@ -27,4 +28,8 @@ public class Skill {
     public int getLevel() {
         return level;
     }
+
+    //GeneralListItem functions
+    public String getViewName() { return name; }
+    public String getViewDescription() { return description + " in level " + level; }
 }

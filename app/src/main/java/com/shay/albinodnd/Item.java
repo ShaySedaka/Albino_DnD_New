@@ -2,8 +2,7 @@ package com.shay.albinodnd;
 
 import android.media.Image;
 
-public class Item {
-
+public class Item extends GeneralListItem {
 
     enum itemType
     {
@@ -14,6 +13,7 @@ public class Item {
     private String name;
     private itemType type;
 
+    //empty constructor for firebase
     public Item() {
 
     }
@@ -27,9 +27,12 @@ public class Item {
         return type;
     }
 
-
     public String getName() {
         return name;
     }
+
+    //GeneralListItem functions
+    public String getViewName() { return name; }
+    public String getViewDescription() { return "from type " + type.toString().toLowerCase(); }
 
 }
