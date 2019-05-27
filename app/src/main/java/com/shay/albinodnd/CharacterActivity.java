@@ -37,7 +37,7 @@ public class CharacterActivity extends AppCompatActivity {
     Button btnAttributes, btnEquipment, btnInventory, btnSkills, btnSpells, btnLanguages, btnNotes;
     ImageView ivPortrait;
     TextView tvClass, tvCharName, tvHP, tvXP, tvAC, tvReflex, tvWill, tvFortitude,
-            tvAtt1, tvAtt2, tvAtt3, tvWeapon;
+            tvAtt1, tvAtt2, tvAtt3,tvAtt1_name, tvAtt2_name, tvAtt3_name, tvWeapon;
 
 
     @Override
@@ -102,6 +102,9 @@ public class CharacterActivity extends AppCompatActivity {
         tvAtt1 = findViewById(R.id.character_topatt1);
         tvAtt2 = findViewById(R.id.character_topatt2);
         tvAtt3 = findViewById(R.id.character_topatt3);
+        tvAtt1_name = findViewById(R.id.character_topatt1_name);
+        tvAtt2_name = findViewById(R.id.character_topatt2_name);
+        tvAtt3_name = findViewById(R.id.character_topatt3_name);
         tvWeapon = findViewById(R.id.character_equipped_weapon);
 
 
@@ -244,7 +247,10 @@ public class CharacterActivity extends AppCompatActivity {
         tvAtt1.setText(String.valueOf(top3.get(0).getAttValue()));
         tvAtt2.setText(String.valueOf(top3.get(1).getAttValue()));
         tvAtt3.setText(String.valueOf(top3.get(2).getAttValue()));
-
+        
+        tvAtt1_name.setText(top3.get(0).getAttName());
+        tvAtt2_name.setText(top3.get(1).getAttName());
+        tvAtt3_name.setText(top3.get(2).getAttName());
 
 
     }
