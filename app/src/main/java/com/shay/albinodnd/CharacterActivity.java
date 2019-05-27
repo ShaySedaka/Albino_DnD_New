@@ -30,7 +30,7 @@ public class CharacterActivity extends AppCompatActivity {
 
 
     //Views
-    Button btnInventory, btnSkill;
+    Button btnInventory, btnSkill, btnAttribute;
 
 
     @Override
@@ -67,6 +67,7 @@ public class CharacterActivity extends AppCompatActivity {
     {
         btnInventory = findViewById(R.id.button_character_inventory);
         btnSkill = findViewById(R.id.button_character_skills);
+        btnAttribute = findViewById(R.id.button_character_attributes);
     }
 
     private void setListeners() {
@@ -84,6 +85,15 @@ public class CharacterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent myIntent = new Intent(CharacterActivity.this, ListActivity.class);
                 mSelectedOption = "skills";
+                CharacterActivity.this.startActivity(myIntent);
+            }
+        });
+
+        btnAttribute.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(CharacterActivity.this, ListActivity.class);
+                mSelectedOption = "attributes";
                 CharacterActivity.this.startActivity(myIntent);
             }
         });
