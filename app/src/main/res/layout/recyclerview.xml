@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    card_view:cardElevation="5dp"
+    card_view:contentPadding="5dp"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardMaxElevation="5dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rounded"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/GeneralName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Name: "
+            android:textColor="@android:color/holo_orange_light"
+            android:padding="5dp"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/ShowGeneralNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Show General Name"
+            android:textColor="@android:color/holo_orange_light"
+            android:padding="5dp"
+            android:textSize="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/GeneralName"
+            android:layout_toEndOf="@+id/GeneralName"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp" />
+
+        <TextView
+            android:id="@+id/GeneralDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Description: "
+            android:textColor="@android:color/holo_orange_light"
+            android:padding="5dp"
+            android:textSize="20dp"
+            android:layout_below="@+id/GeneralName"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/ShowGeneralDescTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Show Description"
+            android:textColor="@android:color/holo_orange_light"
+            android:padding="5dp"
+            android:textSize="20dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:layout_below="@+id/ShowGeneralNameTextView"
+            android:layout_toRightOf="@+id/GeneralDescription"
+            android:layout_toEndOf="@+id/GeneralDescription" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -7,7 +7,8 @@
     tools:context=".CharacterActivity"
     android:background="@drawable/background_dark"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:layoutDirection="ltr">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -370,7 +371,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                >
 
 
             </LinearLayout>
@@ -386,7 +388,6 @@
                 android:text="Attributes"
                 android:textColor="@android:color/holo_orange_light"
                 android:textSize="25sp" />
-
             <Button
                 android:id="@+id/button_character_equipment"
                 android:layout_width="match_parent"
