@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Fields
     public static String mSelectedCharacter = "";
+    public static int numOfCharacters = 8;
 
     private String getSelecterCharacter(){
         return mSelectedCharacter;
@@ -85,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                mSelectedCharacter = "Femina";
+                mSelectedCharacter = "Lady Femina";
                 MainActivity.this.startActivity(myIntent);
             }
         });

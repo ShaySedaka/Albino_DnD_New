@@ -38,7 +38,7 @@
                 android:layout_marginTop="10dp"
                 android:text="Character Name"
                 android:textColor="@android:color/holo_orange_light"
-                android:textSize="18sp"
+                android:textSize="22sp"
                 android:layout_marginBottom="5dp"/>
             
             <LinearLayout
@@ -156,17 +156,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/holo_orange_light"
-                android:textSize="18dp"
+                android:textSize="14sp"
                 android:text="AC"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
             <TextView
                 android:id="@+id/character_armorclass"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/holo_orange_light"
-                android:textSize="16dp"
+                android:textSize="12sp"
                 android:text="aclass"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
 
         </LinearLayout>
 
@@ -182,17 +184,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/holo_orange_light"
-            android:textSize="18dp"
+            android:textSize="14sp"
             android:text="Reflex"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
         <TextView
             android:id="@+id/character_reflex"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/holo_orange_light"
-            android:textSize="16dp"
+            android:textSize="12sp"
             android:text="reflex"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
 
@@ -206,17 +210,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/holo_orange_light"
-            android:textSize="18dp"
+            android:textSize="14sp"
             android:text="Will"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
         <TextView
             android:id="@+id/character_will"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/holo_orange_light"
-            android:textSize="16dp"
+            android:textSize="12sp"
             android:text="will"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
 
@@ -230,17 +236,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/holo_orange_light"
-            android:textSize="18dp"
+            android:textSize="14sp"
             android:text="Fortitude"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
         <TextView
             android:id="@+id/character_fortitude"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/holo_orange_light"
-            android:textSize="16dp"
+            android:textSize="12sp"
             android:text="fortitude"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
 
@@ -262,10 +270,11 @@
             android:layout_margin="10dp">
 
             <TextView
+                android:id="@+id/character_topatt1_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/holo_orange_light"
-                android:textSize="18dp"
+                android:textSize="14sp"
                 android:text="TopAt1"
                 android:textAlignment="center" />
             <TextView
@@ -273,9 +282,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/holo_orange_light"
-                android:textSize="16dp"
+                android:textSize="12sp"
                 android:text="att1"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
 
         </LinearLayout>
 
@@ -288,10 +298,11 @@
             android:layout_margin="10dp">
 
             <TextView
+                android:id="@+id/character_topatt2_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/holo_orange_light"
-                android:textSize="18dp"
+                android:textSize="14sp"
                 android:text="TopAt2"
                 android:textAlignment="center" />
             <TextView
@@ -299,9 +310,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/holo_orange_light"
-                android:textSize="16dp"
+                android:textSize="12sp"
                 android:text="att2"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
 
         </LinearLayout>
 
@@ -312,10 +324,11 @@
             android:layout_margin="10dp">
 
             <TextView
+                android:id="@+id/character_topatt3_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/holo_orange_light"
-                android:textSize="18dp"
+                android:textSize="14sp"
                 android:text="TopAt3"
                 android:textAlignment="center" />
             <TextView
@@ -323,9 +336,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/holo_orange_light"
-                android:textSize="16dp"
+                android:textSize="12sp"
                 android:text="att3"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
 
         </LinearLayout>
 
@@ -339,7 +353,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/holo_orange_light"
-                android:textSize="18dp"
+                android:textSize="14sp"
                 android:text="Weapon"
                 android:textAlignment="center" />
             <TextView
@@ -347,9 +361,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/holo_orange_light"
-                android:textSize="16dp"
+                android:textSize="12sp"
                 android:text="weapon"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
 
         </LinearLayout>
 
@@ -383,7 +398,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/btn_rounded"
-                android:drawableRight="@drawable/equipment"
+                android:drawableRight="@drawable/skills"
                 android:padding="5dp"
                 android:text="Attributes"
                 android:textColor="@android:color/holo_orange_light"

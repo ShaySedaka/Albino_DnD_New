@@ -6,7 +6,7 @@ public class Character {
 
     // character fields
     private String name, owner, favWeapon, charClass;
-    private int level, currentXP, armorClass, maxHP, currHP;
+    private int level, currentXP, armorClass, maxHP, currHP,will,fortitude,reflex;
     private ArrayList<Attribute> attributes;
     private ArrayList<Item> inventory;
     private ArrayList<Skill> skills;
@@ -16,7 +16,7 @@ public class Character {
     }
 
     public Character(String name, String owner, String charClass, String favWeapon, int level, int currentXP,
-                     int armorClass, int maxHP, int currHP, ArrayList<Attribute> attributes,
+                     int armorClass,int will, int fortitude, int reflex, int maxHP, int currHP, ArrayList<Attribute> attributes,
                      ArrayList<Item> inventory, ArrayList<Skill> skills) {
         this.name = name;
         this.owner = owner;
@@ -30,6 +30,9 @@ public class Character {
         this.attributes = attributes;
         this.inventory = inventory;
         this.skills = skills;
+        this.fortitude = fortitude;
+        this.will = will;
+        this.reflex = reflex;
     }
 
     public String getName() {
@@ -40,7 +43,7 @@ public class Character {
         return owner;
     }
 
-    public String gerCharClass() { return charClass; }
+    public String getCharClass() { return charClass; }
 
     public String getFavWeapon() {
         return favWeapon;
@@ -93,5 +96,17 @@ public class Character {
             default:
                 return null;
         }
+    }
+
+    public int getWill() {
+        return will;
+    }
+
+    public int getFortitude() {
+        return fortitude;
+    }
+
+    public int getReflex() {
+        return reflex;
     }
 }
