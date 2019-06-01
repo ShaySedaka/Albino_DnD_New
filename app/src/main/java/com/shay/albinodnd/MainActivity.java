@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                mSelectedCharacter = "Hireston";
+                mSelectedCharacter = "Hiretson";
                 MainActivity.this.startActivity(myIntent);
             }
         });
