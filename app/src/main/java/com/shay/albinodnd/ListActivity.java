@@ -13,7 +13,6 @@ public class ListActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private ArrayList<GeneralListItem> GeneralList = new ArrayList<>();
-    private Character selectedCharacter;
 
 
     @Override
@@ -25,12 +24,7 @@ public class ListActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(ListActivity.this));
 
-        selectedCharacter = CharacterActivity.characters.stream()
-                .filter(character -> MainActivity.mSelectedCharacter.equals(character.getName()))
-                .findAny()
-                .orElse(null);
-
-        GeneralList = selectedCharacter.getListByName(CharacterActivity.mSelectedOption);
+        GeneralList = CharacterActivity.currCharacter.getListByName(CharacterActivity.mSelectedOption);
 
         adapter = new RecyclerViewAdapter(ListActivity.this, GeneralList);
         recyclerView.setAdapter(adapter);

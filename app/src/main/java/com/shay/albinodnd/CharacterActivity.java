@@ -23,10 +23,9 @@ public class CharacterActivity extends AppCompatActivity {
 
     //Fields
     public static String mSelectedOption = "";
-    public static ArrayList<Character> characters = new ArrayList<>();
     private DatabaseReference databaseReference;
-    private ValueEventListener databaseReferenceListener;
-    private Character currCharacter;
+    private ValueEventListener characterDatabaseReferenceListener;
+    public static Character currCharacter;
 
     private String getSelecterOption() {
         return mSelectedOption;
@@ -45,21 +44,16 @@ public class CharacterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character);
 
-
-
-
         databaseReference = FirebaseDatabase.getInstance().getReference();
-        databaseReferenceListener = databaseReference.child("characters").addValueEventListener(new ValueEventListener() {
+        characterDatabaseReferenceListener = databaseReference.child(Consts.CHARACTERS).
+                child(MainActivity.mSelectedCharacter).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                    characters.add(postSnapshot.getValue(Character.class));
-
-                    if(characters.size() >= MainActivity.numOfCharacters) {
-                        extractSelectedCharacter();
-                        loadCharacterData();
-                    }
-                }
+                currCharacter = dataSnapshot.getValue(Character.class);
+                Log.d("Albino D&D", "Selected character is: " + MainActivity.mSelectedCharacter);
+                Log.d("Albino D&D", printAttributes());
+                sortAttributes();
+                loadCharacterData();
             }
 
             @Override
@@ -70,14 +64,12 @@ public class CharacterActivity extends AppCompatActivity {
 
         getViews();
         setListeners();
-
-
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        databaseReference.removeEventListener(databaseReferenceListener);
+        databaseReference.removeEventListener(characterDatabaseReferenceListener);
     }
 
     private void getViews() {
@@ -140,19 +132,19 @@ public class CharacterActivity extends AppCompatActivity {
     }
 
 
-    private Character extractSelectedCharacter() {
-        Character result = null;
-        for (int i = 0; i < characters.size(); i++) {
-            if (MainActivity.mSelectedCharacter.compareTo(characters.get(i).getName()) == 0) {
-                result = characters.get(i);
-                Log.d("Albino D&D", "Selected character is: " + MainActivity.mSelectedCharacter);
-            }
-        }
-        currCharacter = result;
-        Log.d("Albino D&D", printAttributes());
-        sortAttributes();
-        return result;
-    }
+//    private Character extractSelectedCharacter() {
+//        Character result = null;
+//        for (int i = 0; i < characters.size(); i++) {
+//            if (MainActivity.mSelectedCharacter.compareTo(characters.get(i).getName()) == 0) {
+//                result = characters.get(i);
+//                Log.d("Albino D&D", "Selected character is: " + MainActivity.mSelectedCharacter);
+//            }
+//        }
+//        currCharacter = result;
+//        Log.d("Albino D&D", printAttributes());
+//        sortAttributes();
+//        return result;
+//    }
 
     private String printAttributes(){
         String result = "   \n";

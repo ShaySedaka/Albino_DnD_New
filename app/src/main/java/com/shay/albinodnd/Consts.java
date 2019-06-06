@@ -2,6 +2,9 @@ package com.shay.albinodnd;
 
 public final class Consts {
 
+    // General firebase fields
+    public static final String CHARACTERS = "characters";
+
     // Characters names
     public static final String LUCIAN = "Lucian";
     public static final String INIGO = "Inigo";
