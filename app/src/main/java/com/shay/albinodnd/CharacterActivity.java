@@ -115,7 +115,7 @@ public class CharacterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(CharacterActivity.this, ListActivity.class);
-                mSelectedOption = "inventory";
+                mSelectedOption = Consts.INVENTORY;
                 CharacterActivity.this.startActivity(myIntent);
             }
         });
@@ -124,7 +124,7 @@ public class CharacterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(CharacterActivity.this, ListActivity.class);
-                mSelectedOption = "skills";
+                mSelectedOption = Consts.SKILLS;
                 CharacterActivity.this.startActivity(myIntent);
             }
         });
@@ -133,7 +133,7 @@ public class CharacterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(CharacterActivity.this, ListActivity.class);
-                mSelectedOption = "attributes";
+                mSelectedOption = Consts.ATTRIBUTES;
                 CharacterActivity.this.startActivity(myIntent);
             }
         });
@@ -167,28 +167,28 @@ public class CharacterActivity extends AppCompatActivity {
 
         switch(this.currCharacter.getName()){
 
-            case "Lucian":
+            case Consts.LUCIAN:
                 portrait_id = R.drawable.thief_large;
                 break;
-            case "Rig":
+            case Consts.RIG:
                 portrait_id = R.drawable.fighter_large;
                 break;
-            case "Inigo":
+            case Consts.INIGO:
                 portrait_id = R.drawable.paladin_large;
                 break;
-            case "Lady Femina":
+            case Consts.FEMINA:
                 portrait_id = R.drawable.barbarian_large;
                 break;
-            case "Merlin":
+            case Consts.MERLIN:
                 portrait_id = R.drawable.mage_large;
                 break;
-            case "Hiretson":
+            case Consts.HIRETSON:
                 portrait_id = R.drawable.bard_large;
                 break;
-            case "Breanne":
+            case Consts.BREANNE:
                 portrait_id = R.drawable.druid_large;
                 break;
-            case "Cuahu":
+            case Consts.CUAHU:
                 portrait_id = R.drawable.ranger_large;
                 break;
         }

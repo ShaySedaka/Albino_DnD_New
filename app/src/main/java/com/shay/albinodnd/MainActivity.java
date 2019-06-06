@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                mSelectedCharacter = "Lucian";
+                mSelectedCharacter = Consts.LUCIAN;
                 MainActivity.this.startActivity(myIntent);
             }
         });
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                mSelectedCharacter = "Inigo";
+                mSelectedCharacter = Consts.INIGO;
                 MainActivity.this.startActivity(myIntent);
             }
         });
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                mSelectedCharacter = "Cuahu";
+                mSelectedCharacter = Consts.CUAHU;
                 MainActivity.this.startActivity(myIntent);
             }
         });
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                mSelectedCharacter = "Merlin";
+                mSelectedCharacter = Consts.MERLIN;
                 MainActivity.this.startActivity(myIntent);
             }
         });
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                mSelectedCharacter = "Hiretson";
+                mSelectedCharacter = Consts.HIRETSON;
                 MainActivity.this.startActivity(myIntent);
             }
         });
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                mSelectedCharacter = "Lady Femina";
+                mSelectedCharacter = Consts.FEMINA;
                 MainActivity.this.startActivity(myIntent);
             }
         });
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                mSelectedCharacter = "Breanne";
+                mSelectedCharacter = Consts.BREANNE;
                 MainActivity.this.startActivity(myIntent);
             }
         });
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                mSelectedCharacter = "Rig";
+                mSelectedCharacter = Consts.RIG;
                 MainActivity.this.startActivity(myIntent);
             }
         });
