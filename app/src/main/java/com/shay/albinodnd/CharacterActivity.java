@@ -23,10 +23,9 @@ public class CharacterActivity extends AppCompatActivity {
 
     //Fields
     public static String mSelectedOption = "";
-    public static ArrayList<Character> characters = new ArrayList<>();
     private DatabaseReference databaseReference;
-    private ValueEventListener databaseReferenceListener;
-    private Character currCharacter;
+    private ValueEventListener characterDatabaseReferenceListener;
+    public static Character currCharacter;
 
     private String getSelecterOption() {
         return mSelectedOption;
@@ -45,21 +44,16 @@ public class CharacterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character);
 
-
-
-
         databaseReference = FirebaseDatabase.getInstance().getReference();
-        databaseReferenceListener = databaseReference.child("characters").addValueEventListener(new ValueEventListener() {
+        characterDatabaseReferenceListener = databaseReference.child(Consts.CHARACTERS).
+                child(MainActivity.mSelectedCharacter).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                    characters.add(postSnapshot.getValue(Character.class));
-
-                    if(characters.size() >= MainActivity.numOfCharacters) {
-                        extractSelectedCharacter();
-                        loadCharacterData();
-                    }
-                }
+                currCharacter = dataSnapshot.getValue(Character.class);
+                Log.d("Albino D&D", "Selected character is: " + MainActivity.mSelectedCharacter);
+                Log.d("Albino D&D", printAttributes());
+                sortAttributes();
+                loadCharacterData();
             }
 
             @Override
@@ -70,14 +64,12 @@ public class CharacterActivity extends AppCompatActivity {
 
         getViews();
         setListeners();
-
-
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        databaseReference.removeEventListener(databaseReferenceListener);
+        databaseReference.removeEventListener(characterDatabaseReferenceListener);
     }
 
     private void getViews() {
@@ -115,7 +107,7 @@ public class CharacterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(CharacterActivity.this, ListActivity.class);
-                mSelectedOption = "inventory";
+                mSelectedOption = Consts.INVENTORY;
                 CharacterActivity.this.startActivity(myIntent);
             }
         });
@@ -124,7 +116,7 @@ public class CharacterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(CharacterActivity.this, ListActivity.class);
-                mSelectedOption = "skills";
+                mSelectedOption = Consts.SKILLS;
                 CharacterActivity.this.startActivity(myIntent);
             }
         });
@@ -133,26 +125,26 @@ public class CharacterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(CharacterActivity.this, ListActivity.class);
-                mSelectedOption = "attributes";
+                mSelectedOption = Consts.ATTRIBUTES;
                 CharacterActivity.this.startActivity(myIntent);
             }
         });
     }
 
 
-    private Character extractSelectedCharacter() {
-        Character result = null;
-        for (int i = 0; i < characters.size(); i++) {
-            if (MainActivity.mSelectedCharacter.compareTo(characters.get(i).getName()) == 0) {
-                result = characters.get(i);
-                Log.d("Albino D&D", "Selected character is: " + MainActivity.mSelectedCharacter);
-            }
-        }
-        currCharacter = result;
-        Log.d("Albino D&D", printAttributes());
-        sortAttributes();
-        return result;
-    }
+//    private Character extractSelectedCharacter() {
+//        Character result = null;
+//        for (int i = 0; i < characters.size(); i++) {
+//            if (MainActivity.mSelectedCharacter.compareTo(characters.get(i).getName()) == 0) {
+//                result = characters.get(i);
+//                Log.d("Albino D&D", "Selected character is: " + MainActivity.mSelectedCharacter);
+//            }
+//        }
+//        currCharacter = result;
+//        Log.d("Albino D&D", printAttributes());
+//        sortAttributes();
+//        return result;
+//    }
 
     private String printAttributes(){
         String result = "   \n";
@@ -167,28 +159,28 @@ public class CharacterActivity extends AppCompatActivity {
 
         switch(this.currCharacter.getName()){
 
-            case "Lucian":
+            case Consts.LUCIAN:
                 portrait_id = R.drawable.thief_large;
                 break;
-            case "Rig":
+            case Consts.RIG:
                 portrait_id = R.drawable.fighter_large;
                 break;
-            case "Inigo":
+            case Consts.INIGO:
                 portrait_id = R.drawable.paladin_large;
                 break;
-            case "Lady Femina":
+            case Consts.FEMINA:
                 portrait_id = R.drawable.barbarian_large;
                 break;
-            case "Merlin":
+            case Consts.MERLIN:
                 portrait_id = R.drawable.mage_large;
                 break;
-            case "Hiretson":
+            case Consts.HIRETSON:
                 portrait_id = R.drawable.bard_large;
                 break;
-            case "Breanne":
+            case Consts.BREANNE:
                 portrait_id = R.drawable.druid_large;
                 break;
-            case "Cuahu":
+            case Consts.CUAHU:
                 portrait_id = R.drawable.ranger_large;
                 break;
         }

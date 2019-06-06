@@ -1,11 +1,19 @@
 package com.shay.albinodnd;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -17,9 +25,42 @@ public class MainActivity extends AppCompatActivity {
     //Fields
     public static String mSelectedCharacter = "";
     public static int numOfCharacters = 8;
+    private DatabaseReference databaseReference;
+    private ValueEventListener databaseReferenceListener;
+    public static ArrayList<Character> databaseCharacters = new ArrayList<>();
 
     private String getSelecterCharacter(){
         return mSelectedCharacter;
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+        databaseReferenceListener = databaseReference.child(Consts.CHARACTERS)
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                            databaseCharacters.add(postSnapshot.getValue(Character.class));
+                        }
+                        getViews();
+                        setListeners();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        databaseReference.removeEventListener(databaseReferenceListener);
     }
 
     private void getViews()
@@ -39,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                mSelectedCharacter = "Lucian";
+                mSelectedCharacter = Consts.LUCIAN;
                 MainActivity.this.startActivity(myIntent);
             }
         });
@@ -48,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                mSelectedCharacter = "Inigo";
+                mSelectedCharacter = Consts.INIGO;
                 MainActivity.this.startActivity(myIntent);
             }
         });
@@ -58,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                mSelectedCharacter = "Cuahu";
+                mSelectedCharacter = Consts.CUAHU;
                 MainActivity.this.startActivity(myIntent);
             }
         });
@@ -68,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                mSelectedCharacter = "Merlin";
+                mSelectedCharacter = Consts.MERLIN;
                 MainActivity.this.startActivity(myIntent);
             }
         });
@@ -78,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                mSelectedCharacter = "Hiretson";
+                mSelectedCharacter = Consts.HIRETSON;
                 MainActivity.this.startActivity(myIntent);
             }
         });
@@ -87,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                mSelectedCharacter = "Lady Femina";
+                mSelectedCharacter = Consts.FEMINA;
                 MainActivity.this.startActivity(myIntent);
             }
         });
@@ -96,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                mSelectedCharacter = "Breanne";
+                mSelectedCharacter = Consts.BREANNE;
                 MainActivity.this.startActivity(myIntent);
             }
         });
@@ -105,18 +146,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                mSelectedCharacter = "Rig";
+                mSelectedCharacter = Consts.RIG;
                 MainActivity.this.startActivity(myIntent);
             }
         });
 
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        getViews();
-        setListeners();
-    }
 }
