@@ -84,13 +84,13 @@ public class Character {
     public ArrayList<GeneralListItem> getListByName(String name) {
         ArrayList<GeneralListItem> list = new ArrayList<>();
         switch(name) {
-            case "attributes":
-                attributes.stream().filter(attribute -> !("EMPTY".equals(attribute.getAttName()))).forEach(list :: add);
+            case Consts.ATTRIBUTES:
+                attributes.stream().filter(attribute -> !("EMPTY".equals(attribute.getName()))).forEach(list :: add);
                 return list;
-            case "inventory":
+            case Consts.INVENTORY:
                 inventory.stream().filter(item -> !("EMPTY".equals(item.getName()))).forEach(list :: add);
                 return list;
-            case "skills":
+            case Consts.SKILLS:
                 skills.stream().filter(skill -> !("EMPTY".equals(skill.getName()))).forEach(list :: add);
                 return list;
             default:

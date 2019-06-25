@@ -2,6 +2,10 @@ package com.shay.albinodnd;
 
 public final class Consts {
 
+    // General
+    public static final String INTEGER = "Integer";
+    public static final String STRING = "String";
+
     // General firebase fields
     public static final String CHARACTERS = "characters";
 
@@ -17,6 +21,10 @@ public final class Consts {
 
     // Character's fields
     public static final String INVENTORY = "inventory";
+    public static final String ITEMTYPE = "type";
     public static final String SKILLS = "skills";
+    public static final String SKILLDESCRIPTION = "description";
+    public static final String SKILLLEVEL = "level";
     public static final String ATTRIBUTES = "attributes";
+    public static final String ATTVALUE = "attValue";
 }

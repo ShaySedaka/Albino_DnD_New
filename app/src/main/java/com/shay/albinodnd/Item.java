@@ -2,6 +2,8 @@ package com.shay.albinodnd;
 
 import android.media.Image;
 
+import java.util.ArrayList;
+
 public class Item extends GeneralListItem {
 
     enum itemType
@@ -34,5 +36,16 @@ public class Item extends GeneralListItem {
     //GeneralListItem functions
     public String getViewName() { return name; }
     public String getViewDescription() { return "from type " + type.toString().toLowerCase(); }
+    public String getItemType() { return Consts.INVENTORY; }
+    public ArrayList<String> getValuesToEdit() {
+        ArrayList<String> valuesToEdit = new ArrayList<String>();
+        valuesToEdit.add(Consts.ITEMTYPE);
+        return valuesToEdit;
+    }
+    public ArrayList<String> getTypesOfValuesToEdit() {
+        ArrayList<String> typesOfValuesToEdit = new ArrayList<String>();
+        typesOfValuesToEdit.add(Consts.INTEGER);
+        return typesOfValuesToEdit;
+    }
 
 }
