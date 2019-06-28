@@ -64,10 +64,10 @@ public class DFragment extends DialogFragment {
 
                         for (int i = 0 ; i < valuesToEdit.size() ; i++) {
                             String value = values.get(i).getText().toString();
-                            if ("" != value) {
-                                if (Consts.INTEGER == typesOfValuesToEdit.get(i)) {
+                            if (!value.equals("")) {
+                                if (Consts.INTEGER.equals(typesOfValuesToEdit.get(i))) {
                                     databaseReference.child(valuesToEdit.get(i)).setValue(Integer.valueOf(value));
-                                } else if (Consts.STRING == typesOfValuesToEdit.get(i)) {
+                                } else if (Consts.STRING.equals(typesOfValuesToEdit.get(i))) {
                                     databaseReference.child(valuesToEdit.get(i)).setValue(value);
                                 }
                             }
