@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.support.v4.app.DialogFragment;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.os.Bundle;
 import android.view.View;
@@ -45,7 +46,7 @@ public class DFragment extends DialogFragment {
         TextView titleTextView = (TextView) v.findViewById(R.id.title);
         titleTextView.setText(itemViewName);
 
-        ArrayList<EditText> values = setEditTextsInView(v, valuesToEdit);
+        ArrayList<EditText> values = setEditTextsInView(v, valuesToEdit, typesOfValuesToEdit);
 
         // Inflate and set the layout for the dialog
         // Pass null as the parent view because its going in the dialog layout
@@ -95,22 +96,37 @@ public class DFragment extends DialogFragment {
         return args;
     }
 
-    public ArrayList<EditText> setEditTextsInView(View v, ArrayList<String> valuesToEdit) {
+    public ArrayList<EditText> setEditTextsInView(View v, ArrayList<String> valuesToEdit, ArrayList<String> typesOfValuesToEdit) {
         ArrayList<EditText> values = new  ArrayList<EditText>();
         switch (valuesToEdit.size()) {
             case 3:
                 final EditText value3 = (EditText) v.findViewById(R.id.value3);
                 value3.setHint(valuesToEdit.get(2));
                 value3.setVisibility(View.VISIBLE);
+                if (Consts.INTEGER.equals(typesOfValuesToEdit.get(2))) {
+                    value3.setInputType(InputType.TYPE_CLASS_NUMBER);
+                } else if (Consts.STRING.equals(typesOfValuesToEdit.get(2))) {
+                    value3.setInputType(InputType.TYPE_CLASS_TEXT);
+                }
                 values.add(2,value3);
             case 2:
                 final EditText value2 = (EditText) v.findViewById(R.id.value2);
                 value2.setHint(valuesToEdit.get(1));
                 value2.setVisibility(View.VISIBLE);
+                if (Consts.INTEGER.equals(typesOfValuesToEdit.get(1))) {
+                    value2.setInputType(InputType.TYPE_CLASS_NUMBER);
+                } else if (Consts.STRING.equals(typesOfValuesToEdit.get(1))) {
+                    value2.setInputType(InputType.TYPE_CLASS_TEXT);
+                }
                 values.add(1,value2);
             default:
                 final EditText value1 = (EditText) v.findViewById(R.id.value1);
                 value1.setHint(valuesToEdit.get(0));
+                if (Consts.INTEGER.equals(typesOfValuesToEdit.get(0))) {
+                    value1.setInputType(InputType.TYPE_CLASS_NUMBER);
+                } else if (Consts.STRING.equals(typesOfValuesToEdit.get(0))) {
+                    value1.setInputType(InputType.TYPE_CLASS_TEXT);
+                }
                 values.add(0,value1);
         }
         return values;
