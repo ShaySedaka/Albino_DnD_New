@@ -56,7 +56,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                         switch (item.getItemId()) {
                             case R.id.editText:
                                 FragmentManager fm = ((AppCompatActivity) context).getSupportFragmentManager();
-                                DFragment alertDialog = DFragment.newInstance(listItem,position);
+                                DEditFragment alertDialog = DEditFragment.newInstance(listItem,position);
                                 alertDialog.show(fm, "fragment_alert");
                                 return true;
                             case R.id.remove:

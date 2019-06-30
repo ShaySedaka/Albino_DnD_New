@@ -1,11 +1,13 @@
 package com.shay.albinodnd;
 
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import android.view.View;
 
 
 import com.google.firebase.database.DataSnapshot;
@@ -20,7 +22,7 @@ public class ListActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
-    private ArrayList<GeneralListItem> GeneralList = new ArrayList<>();
+    private ArrayList<GeneralListItem> generalList = new ArrayList<>();
     private DatabaseReference databaseReference;
     private ValueEventListener listDatabaseReferenceListener;
 
@@ -41,15 +43,25 @@ public class ListActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 CharacterActivity.currCharacter = dataSnapshot.getValue(Character.class);
 
-                GeneralList = CharacterActivity.currCharacter.getListByName(CharacterActivity.mSelectedOption);
+                generalList = CharacterActivity.currCharacter.getListByName(CharacterActivity.mSelectedOption);
 
-                adapter = new RecyclerViewAdapter(ListActivity.this, GeneralList);
+                adapter = new RecyclerViewAdapter(ListActivity.this, generalList);
                 recyclerView.setAdapter(adapter);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
+        });
+
+        FloatingActionButton fabAdd = findViewById(R.id.fab_add);
+        fabAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fm = getSupportFragmentManager();
+                DAddFragment alertDialog = DAddFragment.newInstance(CharacterActivity.mSelectedOption);
+                alertDialog.show(fm, "fragment_alert");
             }
         });
     }

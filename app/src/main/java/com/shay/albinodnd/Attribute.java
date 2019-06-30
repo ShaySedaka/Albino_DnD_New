@@ -1,6 +1,7 @@
 package com.shay.albinodnd;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Attribute extends GeneralListItem {
 
@@ -42,5 +43,11 @@ public class Attribute extends GeneralListItem {
         ArrayList<String> typesOfValuesToEdit = new ArrayList<String>();
         typesOfValuesToEdit.add(Consts.INTEGER);
         return typesOfValuesToEdit;
+    }
+    public HashMap<String, Object> toMap() {
+        HashMap<String, Object> map = new HashMap<String, Object>();
+        map.put(Consts.ATTNAME, getAttName());
+        map.put(Consts.ATTVALUE, getAttValue() );
+        return map;
     }
 }

@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -17,14 +18,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 
-public class DFragment extends DialogFragment {
+public class DEditFragment extends DialogFragment {
 
-    public DFragment() {
+    public DEditFragment() {
         // Empty constructor required for DialogFragment
     }
 
-    public static DFragment newInstance(GeneralListItem listItem, int itemID) {
-        DFragment frag = new DFragment();
+    public static DEditFragment newInstance(GeneralListItem listItem, int itemID) {
+        DEditFragment frag = new DEditFragment();
         frag.setArguments(createArgsForDFragment(listItem, itemID));
         return frag;
     }
@@ -55,9 +56,6 @@ public class DFragment extends DialogFragment {
                 .setPositiveButton("Done", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        // edit item
-                        //String value = value1.getText().toString();
-
                         DatabaseReference databaseReference = FirebaseDatabase.getInstance()
                                 .getReference().child(Consts.CHARACTERS)
                                 .child(MainActivity.mSelectedCharacter).child(itemType)
@@ -72,13 +70,16 @@ public class DFragment extends DialogFragment {
                                     databaseReference.child(valuesToEdit.get(i)).setValue(value);
                                 }
                             }
+                            else {
+                                Toast.makeText(getActivity(),"BAD INPUT", Toast.LENGTH_SHORT).show();
+                            }
                         }
 
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        DFragment.this.getDialog().cancel();
+                        DEditFragment.this.getDialog().cancel();
                     }
                 });
         return builder.create();

@@ -1,14 +1,16 @@
 package com.shay.albinodnd;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
-public class GeneralListItem {
+abstract class GeneralListItem {
 
-    public String getName() { return "name"; }
-    public String getViewName() { return "generalName"; }
-    public String getViewDescription() { return "generalDescription"; }
-    public String getItemType() { return "general"; }
-    public ArrayList<String> getValuesToEdit() { return null; }
-    public ArrayList<String> getTypesOfValuesToEdit() { return null; }
+    abstract String getName();
+    abstract String getViewName();
+    abstract String getViewDescription();
+    abstract String getItemType();
+    abstract ArrayList<String> getValuesToEdit();
+    abstract ArrayList<String> getTypesOfValuesToEdit();
+    abstract HashMap<String, Object> toMap();
 
 }

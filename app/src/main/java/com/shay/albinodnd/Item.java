@@ -1,14 +1,13 @@
 package com.shay.albinodnd;
 
-import android.media.Image;
-
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Item extends GeneralListItem {
 
     enum itemType
     {
-        WEAPON, ARMOR, ACCESSORY, CONSUMABLE;
+        WEAPON, ARMOR, ACCESSORY, CONSUMABLE
     }
 
     //fields
@@ -39,13 +38,17 @@ public class Item extends GeneralListItem {
     public String getItemType() { return Consts.INVENTORY; }
     public ArrayList<String> getValuesToEdit() {
         ArrayList<String> valuesToEdit = new ArrayList<String>();
-        valuesToEdit.add(Consts.ITEMTYPE);
         return valuesToEdit;
     }
     public ArrayList<String> getTypesOfValuesToEdit() {
         ArrayList<String> typesOfValuesToEdit = new ArrayList<String>();
-        typesOfValuesToEdit.add(Consts.INTEGER);
         return typesOfValuesToEdit;
+    }
+    public HashMap<String, Object> toMap() {
+        HashMap<String, Object> map = new HashMap<String, Object>();
+        map.put(Consts.ITEMNAME, getName());
+        map.put(Consts.ITEMTYPE, getType().toString());
+        return map;
     }
 
 }

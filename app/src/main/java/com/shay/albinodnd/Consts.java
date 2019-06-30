@@ -1,5 +1,8 @@
 package com.shay.albinodnd;
 
+import java.util.ArrayList;
+import java.util.stream.Stream;
+
 public final class Consts {
 
     // General
@@ -21,10 +24,14 @@ public final class Consts {
 
     // Character's fields
     public static final String INVENTORY = "inventory";
+    public static final String ITEMNAME = "name";
     public static final String ITEMTYPE = "type";
+    public static final String ITEMTYPESENUM[] = {"WEAPON", "ARMOR", "ACCESSORY", "CONSUMABLE"};
     public static final String SKILLS = "skills";
+    public static final String SKILLNAME = "name";
     public static final String SKILLDESCRIPTION = "description";
     public static final String SKILLLEVEL = "level";
     public static final String ATTRIBUTES = "attributes";
+    public static final String ATTNAME = "attName";
     public static final String ATTVALUE = "attValue";
 }

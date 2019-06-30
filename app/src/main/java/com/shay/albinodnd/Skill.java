@@ -1,6 +1,7 @@
 package com.shay.albinodnd;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Skill extends GeneralListItem {
 
@@ -46,5 +47,12 @@ public class Skill extends GeneralListItem {
         typesOfValuesToEdit.add(Consts.STRING);
         typesOfValuesToEdit.add(Consts.INTEGER);
         return typesOfValuesToEdit;
+    }
+    public HashMap<String, Object> toMap() {
+        HashMap<String, Object> map = new HashMap<String, Object>();
+        map.put(Consts.SKILLNAME, getName());
+        map.put(Consts.SKILLDESCRIPTION, getDescription() );
+        map.put(Consts.SKILLLEVEL, getLevel() );
+        return map;
     }
 }
